@@ -1,0 +1,7 @@
+.vimrc.local
+.DS*
+connect
+*.o
+out/*
+obj/*
+*.dSYM
