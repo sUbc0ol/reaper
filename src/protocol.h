@@ -40,8 +40,8 @@ struct __attribute__((packed)) reaper_header {
 };
 
 struct __attribute__((packed)) reaper_dgram_hdr {
-    struct udphdr        *uhdr;
-    struct reaper_header *r_hdr;
+    struct udphdr        u_hdr;
+    struct reaper_header r_hdr;
 };
 
 #define IPPROTO_RPR 0xb6 

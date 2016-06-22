@@ -25,6 +25,8 @@ struct rpr_socket {
 #include <net/bpf.h>
 
 int rpr_init_socket(struct rpr_socket *);
+int rpr_get_frame(struct rpr_socket *, u_char **);
 #endif
+int rpr_recv(struct rpr_socket *, u_char *, int len);
 
 #endif //ifndef REAPER_SOCKETIO_H_

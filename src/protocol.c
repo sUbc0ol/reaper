@@ -1,3 +1,0 @@
-/* Needed functions:
- * 
- * */

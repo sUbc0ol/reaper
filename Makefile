@@ -7,7 +7,7 @@ OUT=out
 
 all: reaper
 
-_OBJS = reaper.o protocol.o socketio.o
+_OBJS = reaper.o socketio.o util.o
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
 
 reaper: pre $(OBJS)

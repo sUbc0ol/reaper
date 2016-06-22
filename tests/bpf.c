@@ -1,5 +1,3 @@
-#define _IP_VHL
-
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/types.h>
@@ -25,7 +23,7 @@ struct ip *get_iph(u_char *ehdr){
 struct tcphdr *get_tcph(u_char *ehdr){
     struct ip *iph;
     iph = get_iph(ehdr);
-    return (struct tcphdr*)((u_char*)iph + IP_VHL_HL(iph->ip_vhl)*4);
+    return (struct tcphdr*)((u_char*)iph + (iph->ip_hl*4));
 }
 
 //https://gist.github.com/msantos/939154
